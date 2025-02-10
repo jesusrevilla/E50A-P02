@@ -1,3 +1,5 @@
+-- Initial attempt
+
 CREATE TABLE ESTUDIANTE (
     id_estudiante SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
