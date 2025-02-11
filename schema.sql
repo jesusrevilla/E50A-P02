@@ -32,7 +32,7 @@ CREATE TABLE INSCRIPCION (
 );
 
 -- teaching entity
-CREATE TABLE ENSENIA (
+CREATE TABLE ENSEÑA (
   id_profesor INT REFERENCES PROFESOR(id_profesor) NOT NULL,
   id_curso INT REFERENCES CURSO(id_curso) NOT NULL
 );
@@ -64,7 +64,7 @@ INSERT INTO INSCRIPCION (id_estudiante, id_curso, fecha_inscripcion) VALUES
 (3, 3, '2023-08-20');
 
 --insert teaching
-INSERT INTO ENSENIA (id_profesor, id_curso) VALUES
+INSERT INTO ENSEÑA (id_profesor, id_curso) VALUES
 (1, 1),
 (2, 2),
 (3, 3);
@@ -80,4 +80,4 @@ FROM PROFESOR;
 SELECT *
 FROM INSCRIPCION;
 SELECT *
-FROM ENSENIA;
+FROM ENSEÑA;
