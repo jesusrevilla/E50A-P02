@@ -1,3 +1,33 @@
+CREATE TABLE ESTUDIANTE(
+  id_estudiante SERIAL PRIMARY KEY,
+  nombre VARCHAR(30) NOT NULL,
+  apellido VARCHAR(30) NOT NULL,
+  fecha_nacimiento DATE NOT NULL
+);
+
+CREATE TABLE CURSO(
+  id_curso SERIAL PRIMARY KEY,
+  nombre_curso VARCHAR(30) NOT NULL,
+  creditos INTEGER NOT NULL
+);
+
+CREATE TABLE PROFESOR(
+  id_profesor SERIAL NOT NULL,
+  nombre_profesor VARCHAR(30) NOT NULL,
+  departamento VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE INSCRIPCION(
+  id_estudiante INTEGER NOT NULL,
+  id_curso INTEGER NOT NULL,
+  fecha_inscripcion DATE NOT NULL
+);
+
+CREATE TABLE ENSEÑA(
+  id_profesor INTEGER NOT NULL,
+  id_curso INTEGER NOT NULL
+);
+
 INSERT INTO ESTUDIANTE (nombre, apellido, fecha_nacimiento) VALUES
 ('Juan', 'Pérez', '2000-05-10'),
 ('María', 'González', '2001-02-20'),
