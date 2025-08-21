@@ -32,7 +32,7 @@ CREATE TABLE inscripcion(
 );
 
 -- tabla enseña
-CREATE TABLE ensenia (
+CREATE TABLE enseña (
   id_enseña SERIAL PRIMARY KEY,
   id_profesor SERIAL,
   id_curso SERIAL,
