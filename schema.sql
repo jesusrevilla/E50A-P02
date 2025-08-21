@@ -1,2 +1,28 @@
--- Template
+CREATE TABLE ESTUDIANTE (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    fecha_nacimiento DATE NOT NULL
+);
+CREATE TABLE CURSO (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    creditos INTEGER NOT NULL
+);
+CREATE TABLE PROFESOR (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    departamento VARCHAR(100) NOT NULL
+);
+CREATE TABLE INSCRIPCION (
+    estudiante_id INTEGER REFERENCES ESTUDIANTE(id),
+    curso_id INTEGER REFERENCES CURSO(id),
+    fecha DATE NOT NULL,
+    PRIMARY KEY (estudiante_id, curso_id)
+);
+CREATE TABLE ENSEÑA (
+    profesor_id INTEGER REFERENCES PROFESOR(id),
+    curso_id INTEGER REFERENCES CURSO(id),
+    PRIMARY KEY (profesor_id, curso_id)
+);
 
